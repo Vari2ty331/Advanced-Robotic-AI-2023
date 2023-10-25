@@ -1,0 +1,21 @@
+function bool = checkFootMadePossibleWithMargin(base_foot_coords,new_center_coord)
+
+
+lengths = sqrt(sum((base_foot_coords - new_center_coord).^2,2));
+
+close_foot_coords = base_foot_coords(lengths~=max(lengths),:);
+
+new_foot_coords = new_center_coord*3 - close_foot_coords(1,:) - close_foot_coords(2,:);
+
+if(sqrt(sum((close_foot_coords(1,:) - new_foot_coords).^2,2))>1.110 && sqrt(sum((close_foot_coords(1,:) - new_foot_coords).^2,2))<2 && sqrt(sum((close_foot_coords(2,:) - new_foot_coords).^2,2))>1.110 && sqrt(sum((close_foot_coords(:,2) - new_foot_coords).^2,2))<2)
+
+    bool = true;
+
+else
+
+    bool = false;
+
+end
+
+
+end
