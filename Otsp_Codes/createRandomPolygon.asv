@@ -1,0 +1,14 @@
+function polygon = createRandomPolygon(n)
+
+sizeMultiplier = 1;
+offsetMargin = 0.1;
+
+angle = 2*pi/n;
+for i = 1:length(linspace(0,2*pi,n))
+
+    ref_points(i,:) = [sizeMultiplier*cos((i-1)*angle) sizeMultiplier*sin((i-1)*angle)];
+    
+
+end
+
+asdf = 0;
