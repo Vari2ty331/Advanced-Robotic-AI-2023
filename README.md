@@ -1,1 +1,2 @@
-# Advanced-Robotic-AI-2023
+# VTT_polygon_faces
+VTT path finding MATLAB codes for polygon locomotion
